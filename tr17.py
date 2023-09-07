@@ -19,6 +19,7 @@ with open("svm_model.pkl", "rb") as file:
 with open("tfidf_vectorizer.pkl", "rb") as file:
     vectorizer = pickle.load(file)
 
+nltk.download('stopwords')
 stopwords = nltk.corpus.stopwords.words('english')
 
 def clean_text(text):
